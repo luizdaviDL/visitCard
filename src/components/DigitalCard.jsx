@@ -114,8 +114,8 @@ const DigitalCard = () => {
                 <h2 className="text-2xl font-bold text-gray-800">Sobre Mim</h2>
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Desenvolvedor com mais de 5 anos de experiência criando aplicações web robustas e escaláveis. 
-                Especializado em tecnologias modernas como React, JavaScript e Node.js.
+                Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações envolvendo arquivos (Excel, relatórios, PDFs). 
+                Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuá
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Sempre em busca de novos desafios e oportunidades para crescer profissionalmente, 
