@@ -20,11 +20,18 @@ const Projects = () => {
     {
       title: "AjusteFAST",
       description: "Aplicação desktop para extração, tratamento e organização de dados de PDFs, com exportação para planilhas e interface gráfica desenvolvida com PyWebView, HTML, CSS e JavaScript. Por se tratar de um sistema interno de uma empresa na qual atuei, a demonstração pública não está disponível.",
-      image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["Python", "Html", "Css", "JavaScript"],
+      image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",    
       status: "done", // concluído
-      show: false,
-      showProject: false,            
+      show: true,
+      showProject: true,   
+      screenshots: [
+        "/ajusteFast/AjusteStart.png",
+        "/ajusteFast/Ajuste01.png",
+        "/ajusteFast/Ajuste02.png",
+        "/ajusteFast/Ajuste03.png",
+        "/ajusteFast/Ajuste05.png",
+        "/ajusteFast/Ajuste06.png",        
+      ]         
     },
     {
       title: "FraseMe",
@@ -32,8 +39,7 @@ const Projects = () => {
       image: "../fraseMe.png",
       status: "done-updating",
       show: true,
-      showProject: true,
-      tech: ["React", "Python", "PostgreSQL"],      
+      showProject: true,       
       screenshots: [
         "/fraseme/fraseLogin.png",
         "../fraseme/fraseMe02.png",
@@ -80,10 +86,10 @@ const Projects = () => {
                     }}
                   >
                     {project.status === "done"
-                      ? "Projeto Concluído"
+                      ? "Sistema Desktop: Automoção"
                       : project.status === "development"
                       ? "Em Desenvolvimento"
-                      : "Concluído / Em Atualização"}
+                      : "Sistema Web"}
                   </span>
 
                   {project.show && (

@@ -15,6 +15,13 @@ import {
 import Projects from './Projects';
 
 const DigitalCard = () => {
+  const services = [
+    {name: "Automação de rotinas para empresas e escritórios"}, 
+    {name: "Sistemas personalizados para universitários que precisam de uma solução para o TCC"}, 
+    {name: "Desenvolvimento de plataformas web sob medida"},
+    {name: "Criação de sites para lojas"},
+    {name:  "negócios locais e projetos em geral"}
+  ]
   const skills = [
     { name: 'React', level: 95, color: 'bg-blue-500' },
     { name: 'JavaScript', level: 90, color: 'bg-yellow-500' },
@@ -68,13 +75,13 @@ const DigitalCard = () => {
                 {/* Informações Principais */}
                 <div className="text-center md:text-left flex-1">
                   <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                    Luiz Programador
+                    Luiz Sistemas
                   </h1>
                   <p className="text-xl md:text-2xl text-blue-100 mb-4 font-light">
-                    Desenvolvedor de Sistemas
+                    Desenvolvedor de Sistemas e Aplicativos web
                   </p>
                   <p className="text-white/90 max-w-2xl leading-relaxed">
-                    Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações envolvendo arquivos (Excel, relatórios, PDFs). 
+                    Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações de tarefas envolvendo arquivos (Excel, relatórios, PDFs). 
                     Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuário.
                   </p>
                 </div>
@@ -116,6 +123,23 @@ const DigitalCard = () => {
               </p>
             </div>
 
+            {/** serviços*/}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Coffee className="text-blue-600" size={20} />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">Serviços oferecidos</h2>
+              </div>
+              {services.map((serv, index) =>{
+                return(
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                     <span className="mr-2 text-green-600">•</span> {serv.name}
+                  </p>                              
+                )
+              })}
+            </div>
+
             {/* Habilidades 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
@@ -152,23 +176,14 @@ const DigitalCard = () => {
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-800 mb-6">Contato</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group cursor-pointer">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                    <Mail className="text-blue-600" size={18} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Email</p>
-                    <p className="font-medium text-gray-800">seu@email.com</p>
-                  </div>
-                </div>
-                
+               
                 <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group cursor-pointer">
                   <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
                     <Phone className="text-green-600" size={18} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Telefone</p>
-                    <p className="font-medium text-gray-800">+55 (11) 99999-9999</p>
+                    <p className="font-medium text-gray-800">+55 (91) 99621-4498</p>
                   </div>
                 </div>
                 
@@ -178,42 +193,14 @@ const DigitalCard = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Localização</p>
-                    <p className="font-medium text-gray-800">São Paulo, SP</p>
+                    <p className="font-medium text-gray-800">Ananindeu, PA</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Links Sociais */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Redes Sociais</h3>
-              <div className="space-y-3">
-                <a href="#" className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group">
-                  <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center group-hover:bg-gray-800 transition-colors">
-                    <Github className="text-white" size={18} />
-                  </div>
-                  <span className="font-medium text-gray-800 group-hover:text-gray-900">GitHub</span>
-                  <ExternalLink size={16} className="ml-auto text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </a>
-                
-                <a href="#" className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center group-hover:bg-blue-700 transition-colors">
-                    <Linkedin className="text-white" size={18} />
-                  </div>
-                  <span className="font-medium text-gray-800 group-hover:text-gray-900">LinkedIn</span>
-                  <ExternalLink size={16} className="ml-auto text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </a>
-                
-                <a href="#" className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group">
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:bg-indigo-700 transition-colors">
-                    <Globe className="text-white" size={18} />
-                  </div>
-                  <span className="font-medium text-gray-800 group-hover:text-gray-900">Portfólio</span>
-                  <ExternalLink size={16} className="ml-auto text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </a>
-              </div>
-            </div>
-
+            
             {/* Status */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
               <div className="flex items-center gap-3 mb-4">
