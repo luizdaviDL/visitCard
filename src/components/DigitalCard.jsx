@@ -182,7 +182,7 @@ const DigitalCard = () => {
                     <Phone className="text-green-600" size={18} />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Telefone</p>
+                    <p className="text-sm text-gray-500">Telefone watsApp</p>
                     <p className="font-medium text-gray-800">+55 (91) 99621-4498</p>
                   </div>
                 </div>
