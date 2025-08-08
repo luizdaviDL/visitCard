@@ -81,8 +81,9 @@ const DigitalCard = () => {
                     Desenvolvedor de Sistemas e Aplicativos web
                   </p>
                   <p className="text-white/90 max-w-2xl leading-relaxed">
-                    Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações de tarefas envolvendo arquivos (Excel, relatórios, PDFs). 
-                    Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuário.
+                    Desenvolvedor de sistemas web e sites personalizados, com experiência em automações envolvendo arquivos (Excel, relatórios, PDFs). 
+                    Focado em criar soluções inovadoras e experiências digitais que simplificam e otimizam o dia a dia.
+
                   </p>
                 </div>
               </div>
@@ -115,7 +116,7 @@ const DigitalCard = () => {
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações envolvendo arquivos (Excel, relatórios, PDFs). 
-                Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuá
+                Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuário
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Sempre em busca de novos desafios e oportunidades para crescer profissionalmente, 
