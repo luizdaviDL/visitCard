@@ -1,27 +1,31 @@
+
 import React from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
-  Globe, 
-  Code, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
+  Globe,
+  Code,
   Coffee,
   Star,
   Download,
   ExternalLink
 } from 'lucide-react';
+
 import Projects from './Projects';
 
 const DigitalCard = () => {
-  const services = [
-    {name: "Automação de rotinas para empresas e escritórios"}, 
-    {name: "Sistemas personalizados para universitários que precisam de uma solução para o TCC"}, 
-    {name: "Desenvolvimento de plataformas web sob medida"},
-    {name: "Criação de sites para lojas"},
-    {name:  "negócios locais e projetos em geral"}
-  ]
+const services = [
+  { name: "Automação de processos administrativos e operacionais para empresas e escritórios" },
+  { name: "Desenvolvimento de sistemas personalizados para gestão e necessidades específicas" },
+  { name: "Criação de landing pages profissionais para divulgação de produtos, serviços e captação de clientes" },
+  { name: "Desenvolvimento de sites institucionais e comerciais para empresas e negócios locais" },
+  { name: "Desenvolvimento de plataformas e aplicações web sob medida" },
+  { name: "Desenvolvimento de soluções digitais para projetos acadêmicos e universitários, incluindo TCCs" }
+];
+
   const skills = [
     { name: 'React', level: 95, color: 'bg-blue-500' },
     { name: 'JavaScript', level: 90, color: 'bg-yellow-500' },
@@ -31,192 +35,198 @@ const DigitalCard = () => {
     { name: 'AWS', level: 75, color: 'bg-orange-500' }
   ];
 
-  const projects = [
-    {
-      title: 'E-commerce Platform',
-      tech: 'React • Node.js • PostgreSQL',
-      description: 'Plataforma completa de e-commerce com painel administrativo'
-    },
-    {
-      title: 'API RESTful',
-      tech: 'Express • MongoDB • JWT',
-      description: 'API robusta para aplicação de gerenciamento de tarefas'
-    },
-    {
-      title: 'Dashboard Analytics',
-      tech: 'React • D3.js • JavaScript',
-      description: 'Interface para visualização de dados em tempo real'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
+    <main className="w-full min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 px-4 py-6 md:px-8">
+
+      <div className="w-full max-w-none mx-auto">
+
         {/* Cabeçalho Principal */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-8 transform transition-all duration-300 hover:shadow-2xl">
+        <div className="w-full bg-white rounded-3xl shadow-xl overflow-hidden mb-8 transition-all duration-300 hover:shadow-2xl">
+
           <div className="relative">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800"></div>
+
+            {/* Background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-800"></div>
             <div className="absolute inset-0 bg-black/20"></div>
-            
-            {/* Conteúdo do Header */}
-            <div className="relative z-10 px-8 py-12 text-white">
+
+            {/* Conteúdo */}
+            <div className="relative z-10 px-6 py-10 md:px-12 md:py-14 text-white">
+
               <div className="flex flex-col md:flex-row items-center gap-8">
+
                 {/* Avatar */}
-                <div className="relative group">
-                  <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 transition-transform duration-300 group-hover:scale-105">
-                    <Code size={48} className="text-white" />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                  </div>
+              <div className="relative group shrink-0">
+                <div className="w-32 h-32 rounded-full overflow-hidden bg-[#061d3d] border-2 border-white/40 shadow-lg transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
+
+                  <img
+                    src="/logo.png"
+                    alt="Logotipo Luiz Sistemas"
+                    className="w-full h-full object-cover"
+                  />
+
                 </div>
 
-                {/* Informações Principais */}
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
+                  <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                </div>
+              </div>
+
+                {/* Informações */}
                 <div className="text-center md:text-left flex-1">
+
                   <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
                     Luiz Sistemas
                   </h1>
+                    
                   <p className="text-xl md:text-2xl text-blue-100 mb-4 font-light">
-                    Desenvolvedor de Sistemas e Aplicativos web
+                    TECNOLOGIA E SOLUÇÕES DIGITAIS
                   </p>
-                  <p className="text-white/90 max-w-2xl leading-relaxed">
-                    Desenvolvedor de sistemas web e sites personalizados, com experiência em automações envolvendo arquivos (Excel, relatórios, PDFs). 
-                    Focado em criar soluções inovadoras e experiências digitais que simplificam e otimizam o dia a dia.
+                  
+                  A Luiz Sistemas oferece soluções tecnológicas para empresas, profissionais e empreendedores, com foco no desenvolvimento de sistemas web personalizados, criação de landing pages e sites profissionais, além da automação de processos empresariais. Cada solução é planejada de acordo com as necessidades do negócio, buscando otimizar operações, fortalecer a presença digital e proporcionar mais eficiência por meio da tecnologia.
 
-                  </p>
+                
+
                 </div>
+
               </div>
 
-              {/* Botões de Ação 
-              <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  <Mail size={18} />
-                  Entrar em Contato
-                </button>
-                <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-white/20 transition-all duration-300 border border-white/30">
-                  <Download size={18} />
-                  Download CV
-                </button>
-              </div>*/}
             </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Conteúdo Principal */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+
           {/* Coluna Principal */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Sobre Mim */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="lg:col-span-2 space-y-6 min-w-0">
+
+            {/* Biografia */}
+            <section className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+
               <div className="flex items-center gap-3 mb-6">
+
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                   <Coffee className="text-blue-600" size={20} />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800">Sobre Mim</h2>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Desenvolvedor e estudante de TI, com 3 anos de experiência em desenvolvimento de sistemas web e automações envolvendo arquivos (Excel, relatórios, PDFs). 
-                Tenho como objetivo transformar ideias complexas em soluções simples, úteis e acessíveis, que realmente agreguem valor ao dia a dia do usuário
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Sempre em busca de novos desafios e oportunidades para crescer profissionalmente, 
-                mantendo-me atualizado com as últimas tendências do desenvolvimento web.
-              </p>
-            </div>
 
-            {/** serviços*/}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Sobre a Luiz Sistemas
+                </h2>
+
+              </div>
+
+              <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+                A Luiz Sistemas oferece soluções tecnológicas personalizadas para empresas, profissionais e empreendedores que desejam otimizar processos, fortalecer sua presença digital e aproveitar melhor os recursos da tecnologia.
+                {'\n\n'}
+              Em um cenário em que ferramentas de inteligência artificial tornam a criação de soluções digitais cada vez mais acessível, contar com conhecimento técnico e orientação especializada continua sendo fundamental. Afinal, não basta criar uma ferramenta: é necessário compreender as necessidades do negócio, definir a solução adequada e garantir que ela atenda aos objetivos propostos.
+                {'\n\n'}
+              Nossa atuação abrange o desenvolvimento de sistemas web personalizados, criação de sites institucionais, landing pages e automação de processos administrativos e operacionais.
+                  {'\n\n'}
+              Cada projeto é conduzido a partir do entendimento das necessidades do cliente, considerando funcionalidades, experiência de utilização, organização e viabilidade técnica. O objetivo é entregar soluções que façam sentido na prática, sejam funcionais e contribuam para os resultados do negócio.
+              </p>
+
+            </section>
+
+            {/* Serviços */}
+            <section className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+
               <div className="flex items-center gap-3 mb-6">
+
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                   <Coffee className="text-blue-600" size={20} />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800">Serviços oferecidos</h2>
-              </div>
-              {services.map((serv, index) =>{
-                return(
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                     <span className="mr-2 text-green-600">•</span> {serv.name}
-                  </p>                              
-                )
-              })}
-            </div>
 
-            {/* Habilidades 
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Star className="text-green-600" size={20} />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-800">Habilidades</h2>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Serviços oferecidos
+                </h2>
+
               </div>
+
               <div className="space-y-4">
-                {skills.map((skill, index) => (
-                  <div key={index} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-700">{skill.name}</span>
-                      <span className="text-sm text-gray-500">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                      <div 
-                        className={`h-full ${skill.color} rounded-full transition-all duration-1000 ease-out transform group-hover:animate-pulse`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>*/}
 
-            {/* Projetos Recentes */}
-            <Projects/>
+                {services.map((serv, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-600 leading-relaxed flex items-start gap-2"
+                  >
+                    <span className="text-green-600 font-bold">•</span>
+                    {serv.name}
+                  </p>
+                ))}
+
+              </div>
+
+            </section>
+
+            {/* Projetos */}
+            <section className="w-full">
+              <Projects />
+            </section>
+
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Informações de Contato */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-bold text-gray-800 mb-6">Contato</h3>
+          <aside className="space-y-6 min-w-0">
+
+            {/* Contato */}
+            <section className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                Contato
+              </h3>
+
               <div className="space-y-4">
-               
-                <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group cursor-pointer">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
+
+                {/* WhatsApp */}
+                <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors shrink-0">
                     <Phone className="text-green-600" size={18} />
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Telefone watsApp</p>
-                    <p className="font-medium text-gray-800">+55 (91) 99621-4498</p>
+
+                  <div className="min-w-0">
+                    <p className="text-sm text-gray-500">
+                      Telefone / WhatsApp
+                    </p>
+
+                    <p className="font-medium text-gray-800 break-words">
+                      +55 (91) 99621-4498
+                    </p>
                   </div>
+
                 </div>
-                
-                <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group cursor-pointer">
-                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors">
+
+                {/* Localização */}
+                <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
+
+                  <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors shrink-0">
                     <MapPin className="text-red-600" size={18} />
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Localização</p>
-                    <p className="font-medium text-gray-800">Ananindeu, PA</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Links Sociais */}
-            
-            {/* Status */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-semibold text-green-800">Disponível para trabalho</span>
+                  <div>
+                    <p className="text-sm text-gray-500">
+                      Localização
+                    </p>
+
+                    <p className="font-medium text-gray-800">
+                      Ananindeua, PA
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
-              <p className="text-green-700 text-sm">
-                Estou aberto a novas oportunidades e projetos interessantes. 
-                Vamos conversar sobre como posso ajudar seu projeto!
-              </p>
-            </div>
-          </div>
+
+            </section>
+
+
+          </aside>
+
         </div>
+
       </div>
-    </div>
+
+    </main>
   );
 };
 

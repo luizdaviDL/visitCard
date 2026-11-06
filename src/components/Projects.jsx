@@ -19,7 +19,7 @@ const Projects = () => {
   const projects = [
     {
       title: "AjusteFAST",
-      description: "Aplicação desktop para extração, tratamento e organização de dados de PDFs, com exportação para planilhas e interface gráfica desenvolvida com PyWebView, HTML, CSS e JavaScript. Por se tratar de um sistema interno de uma empresa na qual atuei, a demonstração pública não está disponível.",
+      description: "Sistema desenvolvido para uma Industria com objetivo de facilitar a organização e o processamento de informações contidas em documentos PDF, reduzindo tarefas manuais e agilizando a transferência de dados para planilhas. ",
       image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",    
       status: "done", // concluído
       show: true,
@@ -35,7 +35,7 @@ const Projects = () => {
     },
     {
       title: "FraseMe",
-      description: "Aplicativo de gerenciamento de aprendizado de idiomas para autodidatas",
+      description: "Plataforma voltada a pessoas que desejam aprender novos idiomas de forma independente, permitindo organizar os estudos, acompanhar o progresso e gerenciar atividades de aprendizagem.",
       image: "../fraseMe.png",
       status: "done-updating",
       show: true,
