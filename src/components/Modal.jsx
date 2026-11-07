@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 export const Modal = ({ isOpen, onClose, screenshots }) => {
@@ -10,48 +11,79 @@ export const Modal = ({ isOpen, onClose, screenshots }) => {
   if (!isOpen || !screenshots || screenshots.length === 0) return null;
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
+    setCurrentIndex((prev) =>
+      prev === 0 ? screenshots.length - 1 : prev - 1
+    );
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) =>
+      prev === screenshots.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-      <div className="relative bg-white rounded-lg w-full max-w-md p-4 shadow-lg">
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-xl font-bold text-gray-600 hover:text-black"
-        >
-          <img src="/close.png" alt="Fechar"  style={{marginRight:"2rem", marginTop:"1rem", width:"1.5rem"}}/>
-        </button>
-        <h2 className="text-xl font-semibold mb-4 text-center">Imagens do Projeto</h2>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-2 sm:p-4 md:p-6"
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white rounded-xl w-full max-w-7xl max-h-[95vh] p-4 sm:p-6 md:p-8 shadow-2xl flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Cabeçalho */}
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-2xl font-semibold text-slate-800">
+            Imagens do Projeto
+          </h2>
 
-        <div className="relative">
-          <img
-            src={screenshots[currentIndex]}
-            alt={`Screenshot ${currentIndex + 1}`}
-            className="rounded w-full h-auto max-h-[400px] object-contain"
-          />
-
-          {/* Navegação */}
           <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-2 py-1 rounded-full hover:bg-black/50"
+            onClick={onClose}
+            className="text-gray-500 hover:text-black transition-colors"
+            aria-label="Fechar modal"
           >
-            ◀
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-2 py-1 rounded-full hover:bg-black/50"
-          >
-            ▶
+            <img
+              src="/close.png"
+              alt=""
+              className="w-6 h-6 sm:w-8 sm:h-8"
+            />
           </button>
         </div>
 
-        <div className="text-center mt-2 text-sm text-gray-600">
-          {currentIndex + 1} / {screenshots.length}
+        {/* Área de visualização */}
+        <div className="relative flex-1 min-h-0 flex items-center justify-center bg-slate-100 rounded-lg overflow-hidden p-2 sm:p-4">
+          <img
+            src={screenshots[currentIndex]}
+            alt={`Screenshot ${currentIndex + 1}`}
+            className="max-w-full max-h-[calc(95vh-180px)] object-contain rounded-md"
+          />
+
+          {/* Botão anterior */}
+          {screenshots.length > 1 && (
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Imagem anterior"
+            >
+              &#10094;
+            </button>
+          )}
+
+          {/* Botão próximo */}
+          {screenshots.length > 1 && (
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+              aria-label="Próxima imagem"
+            >
+              &#10095;
+            </button>
+          )}
+        </div>
+
+        {/* Contador */}
+        <div className="text-center mt-4 text-sm sm:text-base text-gray-600">
+          Imagem {currentIndex + 1} de {screenshots.length}
         </div>
       </div>
     </div>
